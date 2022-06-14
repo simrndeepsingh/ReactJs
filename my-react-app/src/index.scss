@@ -1,0 +1,37 @@
+/*Bootstrap configuration FUNCTIONS, MIXINS, VARIABLES */
+
+@import '~bootstrap/scss/_functions.scss';
+@import "~bootstrap/scss/_variables";
+@import '~bootstrap/scss/vendor/_rfs';
+@import '~bootstrap/scss/mixins/border-radius';
+@import '~bootstrap/scss/mixins/_utilities';
+@import '~bootstrap/scss/mixins/_breakpoints';
+@import '~bootstrap/scss/mixins/_lists';
+@import '~bootstrap/scss/mixins/_container';
+@import '~bootstrap/scss/mixins/_grid';
+@import '~bootstrap/scss/mixins/_gradients';
+@import '~bootstrap/scss/mixins/_transition.scss';
+@import '~bootstrap/scss/mixins/_buttons.scss';
+@import '~bootstrap/scss/mixins/_box-shadow.scss';
+@import '~bootstrap/scss/mixins/_clearfix.scss';
+
+/*Bootstrap UTILITIES Configuration */
+
+@import '~bootstrap/scss/_reboot.scss';
+@import '~bootstrap//scss/_root';
+@import '~bootstrap/scss/_utilities.scss';
+@import '~bootstrap/scss//utilities/_api.scss';
+@import '~bootstrap/scss/_type.scss';
+@import "~bootstrap/scss/_containers.scss";
+@import '~bootstrap/scss/_grid';
+@import '~bootstrap/scss/_navbar.scss';
+@import '~bootstrap/scss/_buttons.scss';
+@import '~bootstrap/scss/_carousel.scss';
+@import '~bootstrap/scss/_card.scss';
+
+//common SCSS
+
+@import './common.scss';
+
+//Custom Component SCSS
+@import './Components/Footer/Footer.scss';

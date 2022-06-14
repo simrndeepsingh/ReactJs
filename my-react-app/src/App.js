@@ -1,24 +1,38 @@
+import FullContainer from "./Components/FullContainer/FullContainer";
+import MaxContainer from "./Components/MaxContainer/MaxContainer";
+import Row from "./Components/Row/Row";
+import Navbar from "./Components/Navbar/Navbar";
+import Carousels from "./Components/Carousel/Carousels";
 import logo from './logo.svg';
-import './App.css';
-
+import Card from "./Components/Card/Card";
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <FullContainer>
+        <Navbar />
+      </FullContainer>
+        <Carousels carouselImgAlt="Hero Image" carouselImgSrc={logo}/>
+        <FullContainer fullContainerClass="py-5">
+          <MaxContainer>
+            <Row rowClass="gap-1 flex-lg-nowrap">
+              <Card cardClass="col-md-4 col-12"/>
+              <Card cardClass="col-md-4 col-12"/>
+              <Card cardClass="col-md-4 col-12"/>
+          </Row>
+          </MaxContainer>
+        </FullContainer>
+        <FullContainer fullContainerClass="py-5">
+          <MaxContainer>
+            <Row rowClass="gap-1 flex-lg-nowrap">
+            <Card cardClass="col-md-4 col-12" bgCard="true" bgColor="bg-primary"/>
+            <Card cardClass="col-md-4 col-12" bgCard="true" bgColor="bg-secondary"/>
+            <Card cardClass="col-md-4 col-12" bgCard="true" bgColor="bg-success"/>
+            </Row>
+          </MaxContainer>
+        </FullContainer>
+        <Footer/>
+    </>
   );
 }
 
