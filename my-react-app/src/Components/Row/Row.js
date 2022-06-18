@@ -6,4 +6,8 @@ function Row(props) {
   )
 }
 
+Row.defaultProps = {
+  rowClass:''
+};
+
 export default Row;

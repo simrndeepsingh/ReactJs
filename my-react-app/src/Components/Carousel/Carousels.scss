@@ -1,3 +1,20 @@
 .carousel-item{
-    min-height: calc(100vh - 57px);
+    height:calc(100vh - 56px);
+    & .carousel__img--container {
+            top: 0;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            overflow: hidden;
+            & .carousel__img {
+                    height: 125%;
+                    max-width: 100%;
+                }
+        }
+        & .hero__title{
+            font-variation-settings: "wght" 700;
+            margin-bottom: 30px;
+        }
 }

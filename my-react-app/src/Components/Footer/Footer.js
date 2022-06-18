@@ -2,6 +2,8 @@ import React from 'react';
 import List from '../List/List';
 import Row from '../Row/Row';
 import MaxContainer from '../MaxContainer/MaxContainer';
+import Icons from '../Icons/Icons';
+import Cta from '../CTA/Cta';
 
 
 function Footer() {
@@ -10,18 +12,22 @@ function Footer() {
     <MaxContainer>
         <Row>
             <div className="footer-col">
-                <h4>About</h4>
+            <h4>Sign Up</h4>
+                <Cta ctaLabel="Sign Up" ctaType='link' ctaStyle="text-white bg-default-blue rounded px-5 py-3 text-decoration-none" />
+            </div>
+            <div className="footer-col">
+                <h4>About me</h4>
                 <ul>
-                    <List><a href="#">About us</a></List>
+                    <List><a href="/">About us</a></List>
                 </ul>
             </div>
             <div className="footer-col">
                 <h4>Follow Me</h4>
                 <div className="social-links">
-                    <a href="#" class="text-decoration-none"><span className="fab fa-facebook-f">F</span></a>
-                    <a href="#" class="text-decoration-none"><span className="fab fa-twitter">T</span></a>
-                    <a href="#" class="text-decoration-none"><span className="fab fa-instagram">I</span></a>
-                    <a href="#" class="text-decoration-none"><span className="fab fa-linkedin-in">L</span></a>
+                    <a href="/" className="text-decoration-none bg-default-blue"><Icons iconType="bi bi-facebook" /></a>
+                    <a href="/" className="text-decoration-none bg-default-blue"><Icons iconType="bi bi-twitter" /></a>
+                    <a href="/" className="text-decoration-none bg-default-blue"><Icons iconType="bi bi-instagram" /></a>
+                    <a href="/" className="text-decoration-none bg-default-blue"><Icons iconType="bi bi-linkedin" /></a>
                 </div>
             </div>
         </Row>

@@ -1,30 +1,37 @@
 import React from 'react';
+import Cta from '../CTA/Cta';
+import { useState } from 'react';
 
 function Card(props) {
-    const isBgCard  = props.bgCard ? true :false;
+  const [quantity,setHandle] = useState(0);
+  const quantityHandle = (btnElement)=>{
+    setHandle(quantity+1);
+     disabledBtn(btnElement);
+
+  }
+  const disabledBtn = (btnElement)=>{
+    quantity >=1 ? btnElement.target.disabled = true : btnElement.target.disabled=false;
+  }
+  
   return (
     <>
-    {!isBgCard ? (
-    <div className={`card ${props.cardClass}`}>
-    <div className="card-body">
-      <h5 className="card-title">Card Component</h5>
-      <h6 className="card-subtitle mb-2 text-muted">Card Title</h6>
-      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" className="card-link">Card link</a>
-      <a href="#" className="card-link">Another link</a>
-    </div>
-  </div>
-    ) :
-  <div className={`card text-white ${props.bgColor} mb-3 ${props.cardClass}`}>
-  <div className="card-header">Header</div>
-  <div className="card-body">
-    <h5 className="card-title">Primary card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-}
+      <div className={`col-md-${props.size}`}>
+        <div className="card mb-3">
+          <img src={props.imgSrc} className="card-img-top" alt={props.imgAlt} title={props.imgTitle} />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text product__price">$100.00 USD</p>
+            <small>Quantity {quantity}</small>
+          </div>
+        </div>
+        <Cta ctaStyle="btn bg-default-blue border-0 text-white rounded-0 px-5 py-2 d-flex mx-auto text-uppercase" ctaLabel="Add to cart" btnEvent={quantityHandle}/>
+      </div>
 </>
   )
+}
+
+Card.defaultProps={
+  imgAlt: 'Product Image',
 }
 
 export default Card;
