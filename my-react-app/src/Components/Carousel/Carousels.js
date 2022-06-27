@@ -11,7 +11,7 @@ function Carousels(props) {
       </div>
       <div className="carousel-caption d-none d-md-block">
         <h1 className="display-1 hero__title">New Arrival</h1>
-        <Cta ctaType='link' ctaHref="/" ctaStyle="cta__link cta__pill text-decoration-none bg-default-blue text-white text-uppercase py-3 px-5"  ctaLabel="Buy Now" ctaTarget="_blank"/>
+        <Cta ctaType='link' ctaHref="/product-categories" ctaStyle="cta__link cta__pill text-decoration-none bg-default-blue text-white text-uppercase py-3 px-5"  ctaLabel="Buy Now" ctaTarget="_self"/>
       </div>
     </div>
   </div>

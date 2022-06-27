@@ -1,6 +1,7 @@
 import React from 'react'
 import './Cta.scss';
 import {useRef} from 'react';
+import {Link} from 'react-router-dom';
 
 function Cta(props) {
     const ctaLink = props.ctaType === 'link' ? true : false;
@@ -11,7 +12,7 @@ function Cta(props) {
   return (
     <>
     {ctaLink ? (
-        <a href={props.ctaHref} className={props.ctaStyle} title={props.ctaLabel} target={props.ctaTarget} rel={props.ctaTarget === '_blank'  ? "noopener noreferrer" : ''}>{props.ctaLabel}</a>
+        <Link to={props.ctaHref} className={props.ctaStyle} title={props.ctaLabel} target={props.ctaTarget} rel={props.ctaTarget === '_blank'  ? "noopener noreferrer" : ''}>{props.ctaLabel}</Link>
     ) : 
         <button type="button" className={props.ctaStyle} title={props.ctaLabel} onClick={handleBtn} ref={btnElement}>{props.ctaLabel}</button>
     }

@@ -32,6 +32,7 @@ function Card(props) {
 
 Card.defaultProps={
   imgAlt: 'Product Image',
+  size:'3'
 }
 
 export default Card;

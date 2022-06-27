@@ -8,13 +8,18 @@ import Card from "./Components/Card/Card";
 import Footer from "./Components/Footer/Footer";
 import IconCard from "./Components/IconCard/IconCard";
 import product from "./apple-watch.png";
+import { Routes, Route, Link,Outlet } from "react-router-dom";
+import ProductCategories from "./pages/ProductCategories";
+import ProductPage from "./pages/Product/ProductPage";
 function App() {
   return (
     <>
       <FullContainer fullContainerClass="bg-default-blue position-fixed navbar__container">
           <Navbar />
       </FullContainer>
-        <Carousels carouselImgAlt="Hero Image" carouselImgSrc={hero}/>
+      <Routes>
+        <Route path="/" element={<>
+          <Carousels carouselImgAlt="Hero Image" carouselImgSrc={hero} />
         <FullContainer fullContainerClass="bg-white rounded">
           <MaxContainer>
             <Row>
@@ -35,6 +40,27 @@ function App() {
           </Row>
           </MaxContainer>
         </FullContainer>
+        </>}/>
+        <Route path="/product-categories" element={<>
+          <FullContainer fullContainerClass="py-5">
+            <MaxContainer>
+              <Row>
+                <ProductCategories cardSrc={product} />
+              </Row>
+            </MaxContainer>
+          </FullContainer></>
+        } >
+        </Route>
+        <Route path="/product-categories/product" element={<>
+        <FullContainer fullContainerClass="py-4">
+          <MaxContainer>
+            <Row>
+        <ProductPage cardSrc={product}/>
+        </Row>
+        </MaxContainer>
+        </FullContainer>
+        </>} />
+        </Routes>
         <Footer/>
     </>
   );
